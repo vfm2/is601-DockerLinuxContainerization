@@ -31,7 +31,7 @@
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="virtualization.html">Virtualization</a>
       <a class="nav-item nav-link" href="containerization.html">Containerization</a>
-      <a class="nav-item nav-link active" href="compare.html">Lets Comparing</a>
+      <a class="nav-item nav-link active" href="compare.html">Let's Compare</a>
       <a class="nav-item nav-link" href="webserver.html">Web Server</a>
       <a class="nav-item nav-link" href="linuxDocker.html">Commands</a>
       <a class="nav-item nav-link" href="dockerPyCharm.html">Docker Tutorial</a>
@@ -47,14 +47,88 @@
     <div class="jumbotron jumbotron-fluid" style="background-color:transparent !important;">
         <div class="container">
             <h1 class="display-4 text-center">Comparing Virtualization and Containerization</h1>
-            <p class="lead text-center">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</p>
+            <p class="lead text-center">A Quick Comparison of Virtualization and Containerization and Their Pros and Cons</p>
         </div>
     </div>
 
     <!------------>
     <!--- Body --->
     <!------------>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <p>
+                Containerization and virtualization prove to both be very useful, but is there one method that's better
+                than the other? That depends on your company's or organization's goals and needs. Below is an explanation
+                of the pros and cons of containerization and virtualization. The differences between containerization
+                and virtualization vary. Taking into consideration what an organization's resources or financial budget
+                looks like as well as the resources they already have, picking containerization between virtualization may be
+                an easy choice. Additionally, the image to the right visualizes the structural difference betweeen
+                virtualization and containerization.
+            </p>
+            <h3>Containerization Pros and Cons</h3>
+            <p><b>Pros</b></p>
+            <p>
+            <ul>
+                <li>Container deployment is fast and reliable.</li>
+                <li>Containers are lightweight, meaning they can be deployed on a single server.</li>
+                <li>Only one operating system and server needs to be managed to run several containers.</li>
+                <li>Applications in containers can provide team flexibility when working with them, especially on the cloud.</li>
+                <li>Containers can be run nearly anywhere whether that is a normal computer, IT infrastructure, or on the cloud.</li>
+            </ul>
+            </p>
 
+            <p><b>Cons</b></p>
+            <p>
+            <ul>
+                <li>All containers must be able to run on the same kind of operating system.</li>
+                <li>Containerization is still a fairly new method, meaning some haven't adapted to it yet.</li>
+                <li>All containers can be threatened depending on the security level of the operating system.</li>
+                <li>Not all graphical applications (with Docker in particular) work well.</li>
+                <li>Data storage can be complicated as deleting containers means also deleting the data within them.</li>
+            </ul>
+            </p>
+
+            <h3>Virtualization Pros and Cons</h3>
+            <p><b>Pros</b></p>
+            <p>
+           <ul>
+                <li>Multiple operating systems can be run simultaneously.</li>
+                <li>In case of failure, there is easy recovery and maintenance.</li>
+                <li>Each virtual machine can be copied and moved easily.</li>
+                <li>Teams can centralize workloads with virtual machines and run several operating systems at the same time.</li>
+                <li>Apps and operating systems can be modified without immediately affecting the end-user experience.</li>
+            </ul>
+            </p>
+            <p><b>Cons</b></p>
+            <p>
+           <ul>
+                <li>Running multiple virtual machines at once can lead to unstable performance.</li>
+                <li>Hypervisors are not as efficient as the host operating system.</li>
+                <li>It can take longer to boot up virtualization.</li>
+                <li>Hypervisors are not as efficient as the host operating system.</li>
+                <li>Virtual machines require significant RAM and CPU resources.</li>
+            </ul>
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <img src="https://p2zk82o7hr3yb6ge7gzxx4ki-wpengine.netdna-ssl.com/wp-content/uploads/containers.jpg" style="max-width: 500px; margin: 25px">
+            <figcaption class="figure-caption" style="margin-left: 25px">Source: https://www.cloudmanagementinsider.com/containerization-vs-virtualization/</figcaption>
+        </div>
+        <div class="col-sm-6">
+            <br>
+                <p>Want more information? Check out the links below.</p>
+                    <h4>References and Resources</h4>
+                <p>
+            <ul><a href="https://www.cloudmanagementinsider.com/containerization-vs-virtualization/">Containerization vs. Virtualization | Everything You Need to Know</a></ul>
+            <ul><a href="https://www.burwood.com/blog-archive/containerization-vs-virtualization">Burwood Comparison of Containerization vs Virtualization</a></ul>
+            <ul><a href="https://www.ibm.com/cloud/blog/containers-vs-vms">IBM Comparison of Virtualization and Containerization</a></ul>
+            <ul><a href="https://www.channelfutures.com/open-source/docker-downsides-container-cons-to-consider-before-adopting-docker">Docker Downsides</a></ul>
+                </p>
+            <br>
+        </div>
+    </div>
+</div>
 
     <!------------>
     <!-- Footer -->
