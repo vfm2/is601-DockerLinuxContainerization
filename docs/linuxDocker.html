@@ -47,14 +47,41 @@
     <div class="jumbotron jumbotron-fluid" style="background-color:transparent !important;">
         <div class="container">
             <h1 class="display-4 text-center">Linux and Docker Commands</h1>
-            <p class="lead text-center">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</p>
+            <p class="lead text-center">Basic Linux commands and Login to your Docker Container</p>
         </div>
     </div>
 
     <!------------>
     <!--- Body --->
     <!------------>
+    <h3 class="container">Login to your Docker Container</h3>
 
+    <ul class="container">
+        <li>docker ps</li>
+            <ul class="square">
+              <li style="margin-left:2em">lists out all existing docker images and names on your machine</li>
+            </ul>
+        <br>
+        <img src="images/dockerPSCommand.JPG" class="img-fluid">
+        <br>
+
+        <li>docker exec -it &lt;container&gt; /bin/bash</li>
+            <ul class="square">
+              <li style="margin-left:2em">to get a bash shell into an existing container</li>
+            </ul>
+        <br>
+        <img src="images/dockerExecCommand.JPG" class="img-fluid">
+        <br>
+
+        <li>docker run -it &lt;image name&gt; &lt;command&gt;</li>
+            <ul class="square">
+              <li style="margin-left:2em">To run a container that is not defined by a docker-compose.yml file</li>
+              <li style="margin-left:2em">Use docker run to start a new container with a given image</li>
+            </ul>
+        <br>
+        <img src="images/dockerRunComand.JPG" class="img-fluid">
+        <br>
+    </ul>
 
     <!------------>
     <!-- Footer -->
