@@ -47,13 +47,90 @@
     <div class="jumbotron jumbotron-fluid" style="background-color:transparent !important;">
         <div class="container">
             <h1 class="display-4 text-center">Connect Docker with Pycharm</h1>
-            <p class="lead text-center">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</p>
+            <p class="lead text-center">A tutorial about how to connect Docker with Pycharm to write python code</p>
         </div>
     </div>
 
     <!------------>
     <!--- Body --->
     <!------------>
+    <h3 class="container">Add Docker and Python Files</h3>
+    <ol class="container">
+        <li>Open a new python project in PyCharm</li>
+        <li>Create new file named "Dockerfile" and input the following code to get started:</li>
+        <pre>
+          <code>
+            FROM python:3
+
+            ADD my_script.py /
+
+            RUN pip install pystrich
+
+            CMD [ "python", "./my_script.py" ]
+          </code>
+        </pre>
+        <li>Create new python file named "my_script.py" and input the following code:</li>
+
+
+        <pre>
+          <code>
+            # Sample taken from pyStrich GitHub repository
+            # https://github.com/mmulqueen/pyStrich
+            from pystrich.datamatrix import DataMatrixEncoder
+
+            encoder = DataMatrixEncoder('This is a DataMatrix.')
+            encoder.save('./datamatrix_test.png')
+            print(encoder.get_ascii())
+          </code>
+        </pre>
+    </ol>
+
+    <h3 class="container">Connect to Docker</h3>
+        <ol class="container">
+            <li>Go to "File" and select "Settings"</li>
+             <ol style="list-style-type: lower-alpha; padding-bottom: 0;">
+              <li style="margin-left:2em">A new window will pop open with PyCharm Setting</li>
+             </ol>
+            <li>Open the "Build, Execution, Deployment" tab, select Docker</li>
+            <ol style="list-style-type: lower-alpha; padding-bottom: 0;">
+              <li style="margin-left:2em">Click on the plus on the top left corner</li>
+              <li style="margin-left:2em">Name will be defaulted to "Docker"</li>
+              <li style="margin-left:2em">Select "TCP socket"</li>
+              <li style="margin-left:2em">Type "tcp://localhost:2375" in Engine API URL box</li>
+              <li style="margin-left:2em">Wait for bottom box to input "Connection successful"</li>
+            </ol>
+            <li>Click on "Docker Registration" under "Docker" on left side</li>
+            <ol style="list-style-type: lower-alpha; padding-bottom: 0;">
+              <li style="margin-left:2em">Click on the plus on the top left corner</li>
+              <li style="margin-left:2em">Input your docker username, password, and email"</li>
+              <li style="margin-left:2em">Wait for bottom section to input "Connection successful"</li>
+            </ol>
+            <li>Click "Apply" and "OK" on bottom right of screen</li>
+            <li>Click on dropdown on top right of screen, then "Edit Configurations"</li>
+            <li>Find "Add" plus sign on top left of window</li>
+            <li>Select "Docker" dropdown, then "Dockerfile"</li>
+            <ol style="list-style-type: lower-alpha; padding-bottom: 0;">
+              <li style="margin-left:2em">Input Name, Server (default Docker), Dockerfile (select dockerfile previously created) and image tag name</li>
+              <li style="margin-left:2em">confirm "Run built image" is checked</li>
+              <li style="margin-left:2em">Click "Apply" and "OK"</li>
+            </ol>
+            <li>Next to dropdown on top right, confirm docker name is correct and click the play button to build the image</li>
+        </ol>
+
+
+    <h3 class="container">After image is built, time to create the interpreter</h3>
+        <ol class="container">
+            <li>On the bottom right, select "Add Interpreter"</li>
+            <li>Select "Docker"</li>
+            <li>Confirm Image Name is correct then click "OK"</li>
+        </ol>
+
+
+    <h4 class="container">Your PyCharm project is connected to Docker! Gold Star!!</h4>
+
+    <br>
+    <br>
+
 
 
     <!------------>
