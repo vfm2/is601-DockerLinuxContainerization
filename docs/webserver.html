@@ -55,31 +55,38 @@
     <!--- Body --->
     <!------------>
     <div class="container">
-        <h3>Step One: Build the Docker File</h3>
-        <div>
-            <strong>docker pull ubuntu</strong>
-            <p>Creates the image from the Ubuntu base image</p>
 
-            <strong>docker run -it ubuntu:latest /bin/bash</strong>
-            <p>starts and run a new docker container with image "ubuntu:latest"</p>
+        <div class="row">
+            <div class="col">
+                <h3>Step One: Build the Docker File</h3>
+                <div>
+                    <strong>docker pull ubuntu</strong>
+                    <p>Creates the image from the Ubuntu base image</p>
 
-            <i>***Now that you are in the image, lets install and update the following packages:</i>
+                    <strong>docker run -it ubuntu:latest /bin/bash</strong>
+                    <p>starts and run a new docker container with image "ubuntu:latest"</p>
 
-            <strong>apt-get update</strong>
-            <p>updates all the packages on the Ubuntu system</p>
+                    <i>***Now that you are in the image, lets install and update the following packages:</i>
 
-            <strong>apt-get install apache2</strong>
-            <p>installs apache2 onto the image</p>
+                    <strong>apt-get update</strong>
+                    <p>updates all the packages on the Ubuntu system</p>
 
-            <strong>apt-get install vim</strong>
-            <p>install vim onto the image</p>
+                    <strong>apt-get install apache2</strong>
+                    <p>installs apache2 onto the image</p>
 
-            <strong>apt-get clean</strong>
-            <p>cleans up any unnecessary files from the system</p>
+                    <strong>apt-get install vim</strong>
+                    <p>install vim onto the image</p>
 
-            <i>***Now that our image is ready, lets exit the container using "exit" command and commit your container</i>
+                    <strong>apt-get clean</strong>
+                    <p>cleans up any unnecessary files from the system</p>
+
+                    <i>***Now that our image is ready, lets exit the container using "exit" command and commit your container</i>
+                </div>
+            </div>
+            <div class="col">
+                <img src="images/aptUpdate.JPG" class="img-fluid">
+            </div>
         </div>
-
         <h3>Step Two: Commit the Docker Image</h3>
         <div>
             <strong>docker ps -a</strong>
@@ -88,12 +95,16 @@
             <strong>docker commit &lt;containerID&gt; &lt;nameOfNewDockerImage&gt;</strong>
             <p>Commits your docker image created into a new docker image</p>
 
+            <img src="images/dockerImages_PS.JPG" class="img-fluid" style="max-width: 500px;">
+
         </div>
 
         <h3>Step Three: Run New Docker Image on Local Web Server</h3>
         <div>
             <strong>docker run -it -p 127.0.0.1:80:80 -v C:\File_Path\getting-started:/var/www/html ubuntu-my_apache2 /bin/bash</strong>
             <p>it will login to an interactive shell, -p will expose the port, and -v will bind the host directory.</p>
+
+            <img src="images/shareData.jpg" class="img-fluid">
 
             <h4><i>You can now open up your browser and input "127.0.0.1". You will be able to view your local docker image!</i></h4>
 
